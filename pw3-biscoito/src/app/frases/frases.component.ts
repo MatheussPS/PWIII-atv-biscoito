@@ -1,3 +1,5 @@
+// Matheus Pinter e Paulo Sergio
+
 import { Component } from '@angular/core';
 
 @Component({
