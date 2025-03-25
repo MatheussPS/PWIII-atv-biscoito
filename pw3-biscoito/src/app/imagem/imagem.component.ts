@@ -1,6 +1,6 @@
 // Matheus Pinter e Paulo Sergio
 
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-imagem',
@@ -12,11 +12,6 @@ export class ImagemComponent {
 
   imagemBiscoito = "biscoito-0.png"
 
-  quebrarBiscoito(): void {
-    this.imagemBiscoito = 'biscoito-1.png';
-  }
+  @Input() clip: boolean = false;
 
-  reiniciarBiscoito(): void{
-    this.imagemBiscoito = 'biscoito-0.png'
-  }
 }

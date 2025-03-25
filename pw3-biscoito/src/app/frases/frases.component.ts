@@ -1,6 +1,6 @@
 // Matheus Pinter e Paulo Sergio
 
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './frases.component.css'
 })
 export class FrasesComponent {
+
+  @Output() resultado = new EventEmitter();
 
   frases = ["A vida trará coisas boas se tiveres paciência.",
     "Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.",
@@ -22,10 +24,17 @@ export class FrasesComponent {
     "Podemos escolher o que semear, mas somos obrigados a colher o que plantamos."
   ]
 
-  fraseBiscoito: string = this.frases[this.retornaInteiro()]
+  @Output() emitir = new EventEmitter();
 
-  retornaInteiro(): number {
-    
+  @Input() isBlock:boolean = false;
+
+  @Input() fraseBiscoito: string = this.frases[this.retornaInteiro()]
+
+  retornaInteiro(){
     return Math.floor(Math.random() * 10)
+
+
   }
+
+
 }

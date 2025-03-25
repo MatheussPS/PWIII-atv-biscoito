@@ -3,31 +3,3 @@
     height: 230px;
 }
 
-.biscoito-container{
-    width: 100%;
-}
-
-.biscoito-container, .buttons-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.buttons-container{
-    gap: 1rem;
-}
-
-button{
-    border: none;
-    height: 50px;
-    width: 200px;
-    border-radius: 1.1rem;
-}
-
-button:hover{
-    transform: scale(1.1);
-}
-
-.button-r{
-    background-color: #e6a569;
-}

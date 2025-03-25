@@ -2,11 +2,6 @@
 
 <div class="biscoito-container">
 
-    <img class="img" [src]="imagemBiscoito" alt="">
-
-    <div class="buttons-container">
-        <button class="button-q" (click) = "quebrarBiscoito()">Quebrar</button>
-        <button class="button-r" (click) = "reiniciarBiscoito()">Reiniciar</button>
-    </div>
+    <img class="img" [src]="clip ? 'biscoito-1.png' : 'biscoito-0.png'" alt="">
 
 </div>

@@ -1,4 +1,5 @@
 <!-- Matheus Pinter e Paulo Sergio -->
 
-<app-imagem></app-imagem>
-<app-frases></app-frases>
+<app-imagem [clip]="estadoBiscoito"></app-imagem>
+<app-frases [isBlock]="estadoBiscoito" (emitir)="atualizar($event)" ></app-frases>
+<app-botoes (resultado)="quebrar($event)"></app-botoes>
